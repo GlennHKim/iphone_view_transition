@@ -18,7 +18,9 @@ class ThirdViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        myLabel.text = textVal
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        myLabel.text = appDelegate.str
     }
 
     override func didReceiveMemoryWarning() {
