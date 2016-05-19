@@ -31,10 +31,26 @@ class SecondViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(animated: Bool) {
+        NSLog("view will Appear")
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        NSLog("view did Appear")
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        NSLog("view will Disappear")
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        NSLog("view did Disappear")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        NSLog("view did Load")
         // Do any additional setup after loading the view.
         firstLabel.text = textFieldVal
         if switchVal==true {
