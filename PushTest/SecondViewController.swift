@@ -9,8 +9,14 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    
+    var switchVal:Bool = false
+    var textFieldVal:String = ""
 
-    // modification
+    @IBOutlet weak var firstLabel: UILabel!
+
+    @IBOutlet weak var secondLabe: UILabel!
+    
     @IBAction func nextWithSegue(sender: AnyObject) {
         performSegueWithIdentifier("thirdsegue", sender: self)
     }
@@ -28,6 +34,12 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        firstLabel.text = textFieldVal
+        if switchVal==true {
+            secondLabe.text = "True"
+        } else{
+            secondLabe.text = "False"
+        }
     }
 
     override func didReceiveMemoryWarning() {

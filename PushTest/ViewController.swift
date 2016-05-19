@@ -10,6 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var switchVal:Bool = false
+    
+    @IBOutlet weak var myTextField: UITextField!
+    
+    @IBAction func onSwitch(sender: AnyObject) {
+        let updateSwitch = sender as! UISwitch
+        
+        if(updateSwitch.on==true){
+            switchVal = true
+        }else{
+            switchVal = false
+        }
+    }
+    
     @IBAction func unwindToViewController(segue:UIStoryboardSegue){
         
     }
@@ -24,6 +38,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let secondVC = segue.destinationViewController as? SecondViewController{
+            secondVC.switchVal = switchVal
+            secondVC.textFieldVal = myTextField.text!
+        }
+    }
 
 }
 
