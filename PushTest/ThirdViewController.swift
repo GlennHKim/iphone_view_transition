@@ -14,6 +14,10 @@ class ThirdViewController: UIViewController {
     
     var textVal:String = ""
     
+    @IBAction func Send(sender: AnyObject) {
+        NSNotificationCenter.defaultCenter().postNotificationName("Hello", object: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

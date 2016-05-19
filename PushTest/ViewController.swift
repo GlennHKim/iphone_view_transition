@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         }
     }
     
+    // main story board 에서 button 과 'exit' 연결된 view 에서 해당 버튼 클릭 시 아래 함수가 속한 view 로 이동하도록
     @IBAction func unwindToViewController(segue:UIStoryboardSegue){
         
     }
@@ -31,6 +32,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(method(_:)), name: "Hello", object: nil)
+        
+    }
+    
+    func method(notification:NSNotification){
+        self.view.backgroundColor = UIColor.redColor()
     }
 
     override func didReceiveMemoryWarning() {

@@ -127,6 +127,13 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="okO-Zy-eSS">
+                                <rect key="frame" x="169" y="436" width="36" height="30"/>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="Send:" destination="vtt-Ud-onQ" eventType="touchUpInside" id="nW2-Uy-Y8M"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.77967967634843971" blue="0.37085005313116015" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
