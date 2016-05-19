@@ -10,10 +10,15 @@ import UIKit
 
 class ThirdViewController: UIViewController {
 
+    @IBOutlet weak var myLabel: UILabel!
+    
+    var textVal:String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        myLabel.text = textVal
     }
 
     override func didReceiveMemoryWarning() {

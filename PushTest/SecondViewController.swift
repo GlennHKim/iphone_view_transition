@@ -24,8 +24,10 @@ class SecondViewController: UIViewController {
     @IBAction func nextViewController(sender: AnyObject) {
         if let svc = self.storyboard?.instantiateViewControllerWithIdentifier("thirdview") {
             self.navigationController?.pushViewController(svc, animated: true)
-            
-            print(self.navigationController!.viewControllers)
+            let thrdVC = svc as! ThirdViewController
+            thrdVC.textVal = "Test"
+//            thrdVC.myLabel.text = "나이소오오" // nil pointer error
+//            print(self.navigationController!.viewControllers) // print out view stack
         }
     }
     

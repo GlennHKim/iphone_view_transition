@@ -121,11 +121,20 @@
                                     <segue destination="DgV-55-c4n" kind="unwind" unwindAction="unwindToViewController:" id="EjW-cL-xmo"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WgE-9U-gJE">
+                                <rect key="frame" x="20" y="124" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.77967967634843971" blue="0.37085005313116015" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Third View" id="MH5-fs-Xa3"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="myLabel" destination="WgE-9U-gJE" id="dbv-F9-R8F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vaU-FQ-GZX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="DgV-55-c4n" userLabel="Exit" sceneMemberID="exit"/>
